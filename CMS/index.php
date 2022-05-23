@@ -226,7 +226,7 @@
                             
                             <div class="col-md-12">
                                 <label for="">Foto:</label>
-                                <input type="file" name="team-foto" id="foto" class="form-control">
+                                <input type="file" accept="image/png, image/jpeg, image/jpg" name="team-foto" id="foto" class="form-control">
                             </div>
                             
                             <div class="row justify-content-center">
@@ -496,11 +496,43 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            ...
+                <form action="" id="galery-form">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7">
+                            <label for="">Tipo de Contenido:</label>
+                            <select onchange="cambiar()" name="tipo_content" id="tipo_content" class="form-control">
+                                <option value="0">Seleccione</option>
+                                <option value="1">Imagen</option>
+                                <option value="2">Video</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="img col-md-7">
+                            <label for="">Titulo:</label>
+                            <input type="text" class="form-control" name="title-img">
+                            <label for="">Contenido:</label>
+                            <input type="file" name="contenido_img" id="contenido_img" class="form-control">
+                            <img src="" alt="" id="galery-preview">
+                        </div>
+                        <div class="video col-md-7">
+                            <label for="">Titulo:</label>
+                            <input type="text" class="form-control" name="title-video">
+                            <label for="">Contenido:</label>
+                            <input type="text" name="contenido_video" placeholder="Ingrese el Link" id="contenido_video" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <button type="submit" class="send btn btn-success btn-lg">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+                
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
             </div>
         </div>
         </div>

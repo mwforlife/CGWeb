@@ -1,8 +1,8 @@
 <?php
-require '../Back/Model/Menu.php';
-require '../Back/Model/SubMenu.php';
-require '../Back/Model/Admision.php';
-require '../Back/Model/TipoPersonal.php';
+require '../../Model/Menu.php';
+require '../../Model/SubMenu.php';
+require '../../Model/Admision.php';
+require '../../Model/TipoPersonal.php';
 
 class Controller{
     private $mi;
@@ -71,7 +71,19 @@ class Controller{
         return $lista;
     }
 
-    public function listarPersonal(){
-        
+    public function registraPersonal($nombre, $apellido, $correo, $telefono, $grupo, $cargo, $foto){
+        $this->conexion();
+        $sql = "INSERT INTO personal values (null, '$nombre', '$apellido', '$correo', '$telefono', '$grupo', '$cargo', '$foto', now())";
+        $resultado = $this->mi->query($sql);
+        $this->desconexion();
+        return json_encode($resultado);
+    }
+
+    public function InsertGalery($titulo,$tipo,$valor){
+        $this->conexion();
+        $sql = "INSERT INTO galeria values (null, '$titulo', '$valor',$tipo, now())";
+        $resultado = $this->mi->query($sql);
+        $this->desconexion();
+        return json_encode($resultado);
     }
 }

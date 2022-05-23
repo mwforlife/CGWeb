@@ -67,10 +67,41 @@ $(document).ready(function() {
             processData: false,
             data: data,
             success: function(response) {
-                $("#team-form").html(response);
+                if(response==1 || response=='1'){
+                   swal.fire("¡Felicidades!", "Personal Registrado con exito", "success");
+                   }else{
+                       swal.fire("¡Oh Oh!", response, "error");
+                   }
             },
             error: function(response) {
-                $("#team-form").html(response);
+               swal.fire("¡Oh Oh!", response, "error");
+            }
+
+        });
+    });
+});
+
+$(document).ready(function() {
+    $("#galery-form").on("submit", function(e) {
+        e.preventDefault();
+
+        var data = new FormData($("#galery-form")[0]);
+
+        $.ajax({
+            url: '../Back/View/insert/InsertGalery.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: data,
+            success: function(response) {
+                if(response==1 || response=='1'){
+                   swal.fire("¡Felicidades!", "Contenido Registrado con exito", "success");
+                   }else{
+                       swal.fire("¡Oh Oh!", response, "error");
+                   }
+            },
+            error: function(response) {
+                swal.fire("¡Oh Oh!", response, "error");
             }
 
         });
