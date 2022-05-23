@@ -1,0 +1,87 @@
+/*Adminision*/
+.admision{
+    margin-bottom: 40px;
+}
+.admision .col-md-4{
+    max-width: 380px !important;
+    padding: 10px;
+    border: 10px solid var(--bg-hover);
+    border-radius: 5px;
+    margin: 2px;
+    border-style:dotted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+/*Illustracion*/
+.illustration{
+    width: 150px;
+}
+
+.admision .col-md-4 .col-md-6{
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row{
+    gap: 2em;
+    column-gap: 0em;
+}
+
+.contact-text{
+    font-size: 20px;
+}
+
+.fa-solid{
+    margin-right: 20px;
+}
+
+.contact-text p{
+    padding-left: 40px;
+}
+
+.contact-text a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-text a:hover{
+    color: #8f2d56;
+    text-decoration: none;
+}
+
+#form-contact label{
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 17px;
+}
+
+#form-contact input{
+    padding-left: 32px;
+}
+
+.name{
+    background-image: url(../img/svg_icons/name.svg);
+    background-repeat:no-repeat;
+    background-position: left;
+}
+
+.email{
+    background-image: url(../img/svg_icons/email.svg);
+    background-repeat:no-repeat;
+    background-position: left;
+}
+
+.phone{
+    background-image: url(../img/svg_icons/phone.svg);
+    background-repeat:no-repeat;
+    background-position: left;
+}
