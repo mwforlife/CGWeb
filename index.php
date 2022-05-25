@@ -115,20 +115,20 @@
         <div class="row justify-content-center">
          <div class="col-md-10 text-center">
              <h1 class="galery__title">Galeria Colegio graneros</h1>
-             <p class="galery__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptatem, qui culpa ullam pariatur praesentium distinctio repellendus. Similique inventore minus deserunt animi mollitia minima, labore, quidem dolorum qui nobis facere?</p>
+             <p class="galery__text">La educación es lo que sobrevive cuando lo que se ha aprendido ya se ha olvidado. El cerebro no es un Vaso para llenar, sino una lámpara por encender.</p>
          </div>
         </div>
         <div class="galery__images row justify-content-center gap-2">
              <div class="col-md-6 col-lg-3 d-flex justify-content-center">
-                 <img onclick="cargar(1)" type="button" data-bs-toggle="modal" data-bs-target="#modalimage" src="img/Docentes/img-1.jpg" alt="" class="galery__img">
+                 <img  src="img/Docentes/img-1.jpg" alt="" class="galery__img">
              </div>
              
              <div class="col-md-6 col-lg-3 d-flex justify-content-center">
-                 <img onclick="cargar(1)" type="button" data-bs-toggle="modal" data-bs-target="#modalimage" src="img/Docentes/img-1.jpg" alt="" class="galery__img">
+                 <img  src="img/Docentes/img-1.jpg" alt="" class="galery__img">
              </div>
              
              <div class="col-md-6 col-lg-3 d-flex justify-content-center">
-                 <img onclick="cargar(1)" type="button" data-bs-toggle="modal" data-bs-target="#modalimage" src="img/Docentes/img-1.jpg" alt="" class="galery__img">
+                 <img src="img/Docentes/img-1.jpg" alt="" class="galery__img">
              </div>
              
              

@@ -13,10 +13,14 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="icon" href="../img/logo/logo.jpg">
     <link rel="stylesheet" href="../css/cms__styles.css">
+    <link rel="stylesheet" href="../css/preloader.css">
 </head>
 <body>
+
+
     <header class="cmsheader d-flex justify-content-between">
-      <!--------------------------------------------------------->
+      <!--------------------------asd------------------------------->
+      <!-------->
        <div class="cmsheader--left">
         <figure class="cmsheader--logo">
             <img src="../img/logo/log.png" alt="" class="cmsheader--img">
@@ -43,11 +47,11 @@
             </ul>
         </nav>
     </header>
-    <!---------------------------------------------------------------->
+
     <div class="cmsbody">
-      <!---------------CMS Body Left---------------------->
        <div class="cmsbodymenu--left">
           <!---------------Detalles Usuario------------------->
+          <!----->
            <div class="userdetails">
                <img src="../img/Docentes/img-1.jpg" alt="" class="userimg">
                <p class="userdetails--text">
@@ -57,7 +61,8 @@
                
                <button class="buttonsplit"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
            </div>
-           <!-------------------------------------------------->
+           <!--------------------------ffg------------------------>
+           <!------->
            
            <p class="option-title">Inicio</p>
            
@@ -815,9 +820,9 @@
     <script src="../js/favicons.js"></script>
     <script src="../js/MooTools-Core-1.6.0.js"></script>
     <script src="../js/sweetalert2.all.min.js"></script>
+    <script src="../js/preloader.js"></script>
     <script src="../js/cmsprocess.js"></script>
     <script src="../js/cms__query.js"></script>
-    <!---------
     
 </body>
 </html>
