@@ -1,6 +1,13 @@
 /*Adminision*/
 .admision{
     margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.admision-title{
+    background-color: #1e51be;
+    color: #fff;
+    padding: 20px;
 }
 .admision .col-md-4{
     max-width: 380px !important;
@@ -84,4 +91,51 @@
     background-image: url(../img/svg_icons/phone.svg);
     background-repeat:no-repeat;
     background-position: left;
+}
+
+.periodos{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    gap: 6.9em;
+}
+
+.periodos div{
+    text-align: center;;
+}
+
+.periodos span{
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.993);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.date{
+    color: red !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px !important;
+}
+
+.day{
+    font-size: 35px !important;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 20px !important;
+    background-color: #fff;;
+    min-width: 50px;
+    max-width: 50px;
+    width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    height: 50px;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    color: red !important;
 }

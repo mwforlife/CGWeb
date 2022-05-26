@@ -66,13 +66,13 @@
                 
                 <div class="headerInfo__content__object">
                     <p>
-                    <a href="#" class="object__link">WebMail</a>
+                    <a target="_blank" href="https://solu25.tuwebdns.net:2096/" class="object__link">WebMail</a>
                     </p>
                 </div>
             </div>
             
         <div class="menu__splot">
-            <a class="splot__button" href="#"><img src="img/svg_icons/menu.svg"></a>
+            <a class="splot__button" onclick="menu()" href="#"><img src="img/svg_icons/menu.svg"></a>
         </div>
         </div>
         
@@ -119,19 +119,17 @@
          </div>
         </div>
         <div class="galery__images row justify-content-center gap-2">
-             <div class="col-md-6 col-lg-3 d-flex justify-content-center">
-                 <img  src="img/Docentes/img-1.jpg" alt="" class="galery__img">
-             </div>
-             
-             <div class="col-md-6 col-lg-3 d-flex justify-content-center">
-                 <img  src="img/Docentes/img-1.jpg" alt="" class="galery__img">
-             </div>
-             
-             <div class="col-md-6 col-lg-3 d-flex justify-content-center">
-                 <img src="img/Docentes/img-1.jpg" alt="" class="galery__img">
-             </div>
-             
-             
+            
+                <?php
+                $galery = $c->listargaleriaImagenes();
+                for($i=0;$i<count($galery);$i++){
+                    $g = $galery[$i];
+                    echo "<div class='col-md-6 col-lg-3 d-flex justify-content-center'>";
+                    echo "<img src='media/uploads/galery/".$g->getUbicacion()."' class='galery__img'>";
+                    echo "</div>";
+                }
+                
+                ?>
              
          </div>
          
@@ -147,11 +145,11 @@
         
         
         <!-------------------Admision Begin------------------------->
-        <div class="admision container">
+        <div class="admision ">
             
         <div class="row ">
-            <div class="col-md-12">
-                <h2 class="title-admision text-center font-w">Proceso de Admisión - 
+            <div class="col-md-12 admision-title">
+                <h2 class="title-admision text-center">Proceso de Admisión - 
                     <?php
                     $lista = $c->admision();
                     for ($i=0; $i < count($lista); $i++) { 
@@ -165,6 +163,26 @@
                     }      
 
                     ?></h2>
+                    
+                    <h2 class="title-admision text-center">Año Académico 2023</h2>
+            <div class="periodos container">
+                <div class="periodo-postulaciones">
+                    <h2>Periodo Postulación</h2>
+                    <span class="date"> <span class="day">10</span> Agosto</span></br>
+                    <span>Inicio Periodo</span></br>
+                    <span class="date"><span class="day">7</span> Septiempre</span></br>
+                    <span>Termino Periodo</span></br>
+                </div>
+
+                <div class="periodo-resultados">
+                    <h2>Periodo Resultados</h2>
+                    <span class="date"><span class="day">24</span> Octubre</span></br>
+                    <span>Inicio Periodo</span></br>
+                    <span class="date"><span class="day">28</span> Octubre</span></br>
+                    <span>Termino Periodo</span></br>
+                </div>
+            </div>
+            
             </div>
             <div class="col-md-12">
                 <div class="row justify-content-center flex-wrap">
@@ -176,7 +194,7 @@
                             <div class="col-md-6">
                                 <h3 class="admicion-title">Mira las Fecha</h3>
                                 <p class="admision-text">Accede al Sistema de Admisión Escolar</p>
-                                <a href="" class="object__link">Ir al SAE</a>
+                                <a target="_blank" href="https://www.sistemadeadmisionescolar.cl/" class="object__link">Ir al SAE</a>
                             </div>
                         </div>
                     </div>
@@ -189,7 +207,7 @@
                             <div class="col-md-6">
                                 <h3 class="admicion-title">Postula</h3>
                                 <p class="admision-text">Accede al Sistema de Admisión Escolar</p>
-                                <a href="#" class="object__link">Postula en línea</a>
+                                <a target="_blank" href="https://www.sistemadeadmisionescolar.cl/" class="object__link">Postula en línea</a>
                             </div>
                         </div>
                     </div>
@@ -275,7 +293,7 @@
     
     <footer class="footer">
         <p class="footer__text">Copyright &copy Fundación Colegio Graneros - Chile</p>
-        <a href="login.php">Iniciar Sesión</a>
+        <a href="login.php"><i class="fa-solid fa-hand-point-right text-white"></i>Acceso</a>
 
     </footer>
 

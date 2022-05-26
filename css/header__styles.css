@@ -167,6 +167,10 @@ color: #E83C19;
     display: none;
 }
 
+.splot__button:active ~ .header__menu{
+    display: block;
+}
+
 .splot__button img{
     width: 32px;
     height: 32px;
@@ -176,12 +180,15 @@ color: #E83C19;
 /********************Slider************************/
 .slider{
     width: 100%;
-    background-image: url(../img/slides/image1.png);
+    background-image: url(../img/fondo/portada3.jpg);
     height: 450px;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    background-attachment: fixed;
+    animation: fadeIn 1s;
 }
 
 .slider__content{
@@ -306,6 +313,12 @@ color: #E83C19;
 .footer a:hover{
     color: var(--bg-hover);
 }
+@media screen and (min-width:830px){
+    .header__menu{
+        display: flex;
+    }
+}
+
 @media screen and (max-width: 830px){
     .splot__button{
         display: flex;
@@ -325,6 +338,7 @@ color: #E83C19;
         height: auto;
         flex-direction: column;
         padding: 10px;
+        display: none;
     }
     .header__menu--items{
         flex-direction: column;

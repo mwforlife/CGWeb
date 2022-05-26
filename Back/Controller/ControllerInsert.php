@@ -22,7 +22,7 @@ class Controller{
 
     public function Menu(){
         $this->conexion();
-        $sql = "SELECT * FROM menu";
+        $sql = "SELECT * FROM menu where id_est=1";
         $resultado = $this->mi->query($sql);
         $lista = array();
         while ($rs = mysqli_fetch_array($resultado)) {
@@ -39,7 +39,7 @@ class Controller{
 
     public function SubMenu(){
         $this->conexion();
-        $sql = "SELECT * FROM submenu";
+        $sql = "SELECT * FROM submenu where id_est=1";
         $resultado = $this->mi->query($sql);
         $lista = array();
         while ($rs = mysqli_fetch_array($resultado)) {

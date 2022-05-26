@@ -16,7 +16,7 @@ if (strlen($name) > 0 && strlen($lastname) > 0 && strlen($email) > 0 && strlen($
 $image_name = "TeamImage".date("dHis").".".pathinfo($_FILES['team-foto']['name'], PATHINFO_EXTENSION);
 
 //Definir la ruta de la imagen
-$destino = $_SERVER['DOCUMENT_ROOT'] . "/CGWeb/img/Docentes/";
+$destino = $_SERVER['DOCUMENT_ROOT'] . "/demo/img/Docentes/";
 
 //Mover la imagen del directorio temporal al directorio escogido
 move_uploaded_file($_FILES['team-foto']['tmp_name'], $destino . $image_name);

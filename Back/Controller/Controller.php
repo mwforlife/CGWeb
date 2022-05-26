@@ -2,6 +2,9 @@
 require 'Back/Model/Menu.php';
 require 'Back/Model/SubMenu.php';
 require 'Back/Model/Admision.php';
+require 'Back/Model/TipoPersonal.php';
+require 'Back/Model/Personal.php';
+require 'Back/Model/Galeria.php';
 
 class Controller{
     private $mi;
@@ -67,6 +70,44 @@ class Controller{
             $periodo = $rs['periodo'];
             $estado = $rs['id_est'];
             $m = new Admision($id, $fecha_inicio,$fecha_termino,$periodo, $estado);
+            $lista[] = $m;
+        }
+        $this->desconexion();
+        return $lista;
+    }
+
+
+    
+    public function listargaleriaImagenes(){
+        $this->conexion();
+        $sql = "SELECT * FROM galeria where id_tip=1";
+        $resultado = $this->mi->query($sql);
+        $lista = array();
+        while ($rs = mysqli_fetch_array($resultado)) {
+            $id = $rs['id_gal'];
+            $nombre = $rs['nombre'];
+            $ubicacion = $rs['link'];
+            $tipo = $rs['id_tip'];
+            $fecha = $rs['fecha'];
+            $m = new Galeria($id, $nombre, $ubicacion, $tipo, $fecha);
+            $lista[] = $m;
+        }
+        $this->desconexion();
+        return $lista;
+    }
+
+    public function listargaleriaVideo(){
+        $this->conexion();
+        $sql = "SELECT * FROM galeria where id_tip=2";
+        $resultado = $this->mi->query($sql);
+        $lista = array();
+        while ($rs = mysqli_fetch_array($resultado)) {
+            $id = $rs['id_gal'];
+            $nombre = $rs['nombre'];
+            $ubicacion = $rs['link'];
+            $tipo = $rs['id_tip'];
+            $fecha = $rs['fecha'];
+            $m = new Galeria($id, $nombre, $ubicacion, $tipo, $fecha);
             $lista[] = $m;
         }
         $this->desconexion();

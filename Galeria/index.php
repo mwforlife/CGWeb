@@ -83,52 +83,39 @@
         <div class="row justify-content-center">
          <div class="col-md-10 text-center">
              <h1 class="galery__title">Galeria Colegio graneros</h1>
-             <p class="galery__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptatem, qui culpa ullam pariatur praesentium distinctio repellendus. Similique inventore minus deserunt animi mollitia minima, labore, quidem dolorum qui nobis facere?</p>
+             <p class="galery__text">La educación es lo que sobrevive cuando lo que se ha aprendido ya se ha olvidado. El cerebro no es un Vaso para llenar, sino una lámpara por encender.</p>
          </div>
         </div>
         <div class="galery__images row justify-content-center gap-2">
-             <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                 <img onclick="cargar(1)" type="button" data-bs-toggle="modal" data-bs-target="#modalimage" src="../img/Docentes/img-1.jpg" alt="" class="galery__img">
-             </div>
-             
-             <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                 <img onclick="cargar(1)" type="button" data-bs-toggle="modal" data-bs-target="#modalimage" src="../img/Docentes/img-1.jpg" alt="" class="galery__img">
-             </div>
-             
-             <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                 <img onclick="cargar(1)" type="button" data-bs-toggle="modal" data-bs-target="#modalimage" src="../img/Docentes/img-1.jpg" alt="" class="galery__img">
-             </div>
-             <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                 <img onclick="cargar(1)" type="button" data-bs-toggle="modal" data-bs-target="#modalimage" src="../img/Docentes/img-1.jpg" alt="" class="galery__img">
-             </div>
-             <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                 <img onclick="cargar(1)" type="button" data-bs-toggle="modal" data-bs-target="#modalimage" src="../img/Docentes/img-1.jpg" alt="" class="galery__img">
-             </div>
-             
-             <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                 <img onclick="cargar(1)" type="button" data-bs-toggle="modal" data-bs-target="#modalimage" src="../img/Docentes/img-1.jpg" alt="" class="galery__img">
-             </div>
-             
-             
-             
-             
+                <?php
+
+                $galery = $c->listargaleriaImagenes();
+                for($i=0;$i<count($galery);$i++){
+                    $g = $galery[$i];
+                    $ubicacion = $g->getUbicacion();
+                    echo "<div class='col-md-6 col-lg-3 d-flex justify-content-center'>";
+                    echo "<img onclick='cargar(\"$ubicacion\")' type='button' data-bs-toggle='modal' data-bs-target='#modalimage' src='../media/uploads/galery/$ubicacion' class='galery__img'>";
+                    echo "</div>";
+                }
+                
+                ?>          
          </div>
      </div>
      
      <div class="galery__content galery__content--video">
-        <div class="row justify-content-center">
-         <div class="col-md-10 text-center">
-             <h1 class="galery__title">Galeria Colegio graneros</h1>
-             <p class="galery__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptatem, qui culpa ullam pariatur praesentium distinctio repellendus. Similique inventore minus deserunt animi mollitia minima, labore, quidem dolorum qui nobis facere?</p>
-         </div>
-        </div>
         <div class="galery__images row justify-content-center gap-2">
-             <div class="col-sm-6 col-md-4 col-lg-3 d-flex flex-column justify-content-center align-items-center">
-                 <button type="button" data-bs-toggle="modal" data-bs-target="#modalvideo" class="videoopen"><i class="fa-solid fa-video"></i></button>
-                 <p class="event__name">Dia del Alumno 2022</p>
-                 <p class="video__name">Thriller Profesores</p>
-             </div>
-             
+
+                <?php
+                $galery = $c->listargaleriaVideo();
+                for ($i=0; $i < count($galery) ; $i++) {
+                    $g = $galery[$i];
+                    $ubicacion = $g->getUbicacion();
+                    echo '<div class="col-sm-6 col-md-4 col-lg-3 d-flex flex-column justify-content-center align-items-center">';
+                    echo "<button onclick='cargarvideo(\"$ubicacion\")' type='button' data-bs-toggle='modal' data-bs-target='#modalvideo' class='videoopen'><i class='fa-solid fa-video'></i></button>";
+                    echo '<p class="videoname">'.$g->getNombre().'</p>';
+                    echo '</div>';
+                }
+                ?>
          </div>
      </div>
  </div>
@@ -146,7 +133,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img class="imgmodal" src="../img/Docentes/img-1.jpg" alt="">
+        <img id="imgmodal" class="imgmodal" src="../img/Docentes/img-1.jpg" alt="">
       </div>
       <div class="modal-footer">
       </div>
@@ -163,7 +150,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <iframe class="iframeVideo" src="https://www.youtube.com/embed/idh_hoYPB1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="iframeVideo" class="iframeVideo" src="" title="Video Colegio Graneros" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="modal-footer">
       </div>
@@ -180,5 +167,6 @@
     <script src="../js/preloader.js"></script>
     <script src="../js/main__query.js"></script>
     <script src="../js/favicons.js"></script>
+    <script src="../js/galery__query.js"></script>
 </body>
 </html>

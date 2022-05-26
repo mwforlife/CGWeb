@@ -14,7 +14,7 @@ if($tipo==0){
 $image_name = "GaleryImage".date("dHis").".".pathinfo($_FILES['contenido_img']['name'], PATHINFO_EXTENSION);
 
 //Definir la ruta de la imagen
-$destino = $_SERVER['DOCUMENT_ROOT'] . "/CGWeb/media/uploads/galery/";
+$destino = $_SERVER['DOCUMENT_ROOT'] . "/demo/media/uploads/galery/";
 
 //Mover la imagen del directorio temporal al directorio escogido
 move_uploaded_file($_FILES['contenido_img']['tmp_name'], $destino . $image_name);

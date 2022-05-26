@@ -1,15 +1,19 @@
 <?php
+include 'PHPMailer/PHPMailerAutoload.php';
+
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['mensaje'];
 $phone = $_POST['phone'];
 
 
+
+
+
 // allow for demo mode testing of emails
 define("DEMO", false); // setting to TRUE will stop the email from sending.
 
-// set the location of the template file to be loaded
-$template_file = "../templates/contact__template.php";
+$templates_file = file_get_contents("../templates/contact__template.php");
 
 // set the email 'from' information
 $email_from = "Colegio Graneros - Contactos <wilkenstech@gmail.com>";
@@ -38,25 +42,44 @@ $email_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 $email_to ="mwforlife24@gmail.com";
 $email_subject = $swap_var['{EMAIL_TITLE}']; // you can add time() to get unique subjects for testing: time();
 
-// load in the template file for processing (after we make sure it exists)
-if (file_exists($template_file)){
-    $email_message = file_get_contents($template_file);
-}else{
-    die ("Unable to locate your template file");
-}
+$email_message = $templates_file;
+
 // search and replace for predefined variables, like SITE_ADDR, {NAME}, {lOGO}, {CUSTOM_URL} etc
 foreach (array_keys($swap_var) as $key){
     if (strlen($key) > 2 && trim($swap_var[$key]) != '')
         $email_message = str_replace($key, $swap_var[$key], $email_message);
 }
 
+$mail = new PHPMailer();
+$mail->IsSMTP();
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = "ssl";
+$mail->Host = "mail.colegiograneros.cl";
+$mail->Port = 465;
+$mail->Username = "contacto@colegiograneros.cl";
+$mail->Password = "informatica2022";
+$mail->From = "contacto@colegiograneros.cl";
+$mail->FromName = "Colegio Graneros | Contacto";
+$mail->Subject = "Contacto Desde la Web";
+$mail->Body = $email_message;
+$mail->AddAddress("mwforlife24@gmail.com", "Colegio Graneros");
+$mail->IsHTML(true);
+$mail->AltBody = "This is the body in plain text for non-HTML mail clients";
+
+
 // check if the email script is in demo mode, if it is then dont actually send an email
 if (DEMO){
     die("<hr /><center>This is a demo of the HTML email to be sent. No email was sent. </center>");
 }
 // send the email out to the user  
-    if (mail($email_to, $email_subject, $email_message, $email_headers)){
+    /*if (mail($email_to, $email_subject, $email_message, $email_headers)){
         echo 1;
     } else {
+        echo "The email message was not sent.";
+    }*/
+
+    if ($mail->send()) {
+        echo 1;
+    }else{
         echo "The email message was not sent.";
     }

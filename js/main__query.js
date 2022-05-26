@@ -1,5 +1,32 @@
+var start = 
+setTimeout(slide,5000);;
+var item=1;
+var click=0;
 
+function slide(){
+    var img1 = "img/fondo/prtada.jpg";
+    var img2 = "img/fondo/portada3.jpg";
 
+    if(item==1){
+            $(".slider").css("background-image","url(img/fondo/prtada.jpg)");
+            item++;
+            setTimeout(slide,3000);
+    }else{
+            $(".slider").css("background-image","url(img/fondo/portada3.jpg)");
+            item=1;
+            setTimeout(slide,3000);
+    }
+}
+
+function menu(){
+    if(click==0){
+        $(".header__menu").css("display","block");
+        click=1;
+    }else{
+        $(".header__menu").css("display","none");
+        click=0;
+    }
+}
 
 $(document).ready(function() {
     $("#form-contact").on("submit", function(e) {
@@ -20,7 +47,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "Back/view/mail/contact.php",
+            url: "Back/View/mail/contact.php",
             data: data,
             success: function(datos) {
                 if (datos == "1") {

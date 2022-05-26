@@ -35,5 +35,5 @@ for ($i=0; $i < count($lista); $i++) {
 }
 
 echo '</ul>
-<a href="#" class="object__link object__link--movil">WebMail</a>
+<a target="_blank" href="https://solu25.tuwebdns.net:2096/" class="object__link object__link--movil">WebMail</a>
 </div>';
