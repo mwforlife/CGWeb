@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-md-4">
                     <label for="">Contraseña:</label>
-                    <input type="email" class="form-control">
+                    <input type="password" name="password" class="form-control">
                 </div>
                 <div class="col-md-4 d-flex gap-2">
                     <span>Olvidaste tu Contrasaeña</span><a href="#"><i class="fa-solid fa-hand-point-right text-white"></i></a>
@@ -54,5 +54,6 @@
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/preloader.js"></script>
     <script src="js/favicons.js"></script>
+    <script src="js/login__query.js"></script>
     </body>
 </html>
