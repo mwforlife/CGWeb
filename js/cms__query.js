@@ -82,6 +82,35 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    $("#documentos-form").on("submit", function(e) {
+        e.preventDefault();
+
+        
+
+        var data = new FormData($("#documentos-form")[0]);
+
+        $.ajax({
+            url: '../Back/View/insert/InsertDocumentos.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: data,
+            success: function(response) {
+                if(response==1 || response=='1'){
+                   swal.fire("¡Felicidades!", "Documento Registrado con exito", "success");
+                   }else{
+                       swal.fire("¡Oh Oh!", response, "error");
+                   }
+            },
+            error: function(response) {
+               swal.fire("¡Oh Oh!", response, "error");
+            }
+
+        });
+    });
+});
+
+$(document).ready(function() {
     $("#galery-form").on("submit", function(e) {
         e.preventDefault();
 

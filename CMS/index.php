@@ -100,15 +100,7 @@
                        
                        <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#galeria" class="submenuleft--link"><i class="fa-solid fa-house"></i>Galeria</a></li>
                        
-                       <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#documentos" class="submenuleft--link"><i class="fa-solid fa-folder"></i>Documentos</a>
-                          
-                           <ul class="subsubmenuleft--items">
-                               <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#reglamentointerno" class="submenuleft--link"><i class="fa-solid fa-shield"></i>Reglamento Interno</a></li>
-                               
-                               <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#reglamentoevaluacion" class="submenuleft--link"><i class="fa-solid fa-book"></i>Reglamento de Evaluacion 2022</a></li>
-                               <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#reglamentoconvivencia" class="submenuleft--link"><i class="fa-solid fa-user-tie"></i>Reglamento de Convivenvia Escolar</a></li>
-                           </ul>
-                       </li>
+                       <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#documentos" class="submenuleft--link"><i class="fa-solid fa-folder"></i>Documentos</a></li>
                        <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#escuela" class="submenuleft--link"><i class="fa-solid fa-school"></i>Escuela</a>
                            <ul class="subsubmenuleft--items">
                            <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#utiles" class="submenuleft--link"><i class="fa-solid fa-pen"></i>Utiles</a></li>
@@ -116,14 +108,7 @@
                        </li>
                        <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#plataformas" class="submenuleft--link"><i class="fa-solid fa-folder"></i>Plataformas</a></li>
                        
-                       <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#retorno" class="submenuleft--link"><i class="fa-solid fa-folder"></i>Retorno a clases</a>
-                           <ul class="subsubmenuleft--items">
-                           <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#protocolosanitario" class="submenuleft--link"><i class="fa-solid fa-shield"></i>Protocolo medidas sanitarias 2022</a></li>
-                           <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#manualretorno" class="submenuleft--link"><i class="fa-solid fa-shield"></i>Manual Retorno a clases 2022</a></li>
-                           <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#parvulo" class="submenuleft--link"><i class="fa-solid fa-user-tie"></i>Párvulo</a></li>
-                           <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#basicaymedia" class="submenuleft--link"><i class="fa-solid fa-user-tie"></i>Básica y Media</a></li>
-                           </ul>
-                       </li>
+                       <li class="submenuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#retorno" class="submenuleft--link"><i class="fa-solid fa-folder"></i>Retorno a clases</a></li>
                    </ul>
                </li>
                <li class="menuleft--item"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#usuario" class="menuleft--link"><i class="fa-solid fa-users"></i> Usuarios</a>
@@ -251,8 +236,8 @@
         </div>
     </div>
     
-    <!-- Modal Equipo Directivo-->
-    <div class="modal fade" id="equipodirectivo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- Modal Equipo Listado-->
+    <div class="modal fade" id="equipolistado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -299,198 +284,6 @@
         </div>
     </div>
     
-    
-    <!-- Modal Coordinadores Academicos-->
-    <div class="modal fade" id="coordinadoracademicos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel"> <i class="fa-solid fa-user"></i> Coordinadores Academicos</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-12">
-                       <h4></h4>
-                        <table class="table table-dark table-striped table-hover equipo">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Cargo</th>
-                                    <th>Grupo</th>
-                                    <th>Correo</th>
-                                    <th>Telefono</th>
-                                    <th>Foto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td >Wilkens</td>
-                                    <td >Mompoint</td>
-                                    <td >Encargado Informatica</td>
-                                    <td >Asistente</td>
-                                    <td >informatica2020.cg@gmail.com</td>
-                                    <td >945250440</td>
-                                    <td ><img style="width: 64px; border-radius: 50%;" src="../img/Docentes/img-1.jpg" alt=""></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <!-- Modal PLOC -->
-    <div class="modal fade" id="ploc" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-       <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel"> <i class="fa-solid fa-user"></i> Equipo PLOC</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-12">
-                       <h4></h4>
-                        <table class="table table-dark table-striped table-hover equipo">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Cargo</th>
-                                    <th>Grupo</th>
-                                    <th>Correo</th>
-                                    <th>Telefono</th>
-                                    <th>Foto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td >Wilkens</td>
-                                    <td >Mompoint</td>
-                                    <td >Encargado Informatica</td>
-                                    <td >Asistente</td>
-                                    <td >informatica2020.cg@gmail.com</td>
-                                    <td >945250440</td>
-                                    <td ><img style="width: 64px; border-radius: 50%;" src="../img/Docentes/img-1.jpg" alt=""></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <!-- Modal Profesor de Asignatura-->
-    <div class="modal fade" id="profasignatura" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel"> <i class="fa-solid fa-user"></i> Profesor de Asignatura</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-12">
-                       <h4></h4>
-                        <table class="table table-dark table-striped table-hover equipo">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Cargo</th>
-                                    <th>Grupo</th>
-                                    <th>Correo</th>
-                                    <th>Telefono</th>
-                                    <th>Foto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td >Wilkens</td>
-                                    <td >Mompoint</td>
-                                    <td >Encargado Informatica</td>
-                                    <td >Asistente</td>
-                                    <td >informatica2020.cg@gmail.com</td>
-                                    <td >945250440</td>
-                                    <td ><img style="width: 64px; border-radius: 50%;" src="../img/Docentes/img-1.jpg" alt=""></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <!-- Modal PIE-->
-    <div class="modal fade" id="pie" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-       <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel"> <i class="fa-solid fa-user"></i> Equipo PIE</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-12">
-                       <h4></h4>
-                        <table class="table table-dark table-striped table-hover equipo">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Cargo</th>
-                                    <th>Grupo</th>
-                                    <th>Correo</th>
-                                    <th>Telefono</th>
-                                    <th>Foto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td >Wilkens</td>
-                                    <td >Mompoint</td>
-                                    <td >Encargado Informatica</td>
-                                    <td >Asistente</td>
-                                    <td >informatica2020.cg@gmail.com</td>
-                                    <td >945250440</td>
-                                    <td ><img style="width: 64px; border-radius: 50%;" src="../img/Docentes/img-1.jpg" alt=""></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
     
     <!-- Modal Galeria-->
     <div class="modal fade" id="galeria" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -552,70 +345,28 @@
             <h5 class="modal-title" id="staticBackdropLabel"> <i class="fa-solid fa-folder"></i> Documentos</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <form action="" id="documentos-form">
             <div class="modal-body">
-            ...
+            <h3>Registro de Documentos</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Titulo:</label>
+                        <input type="text" placeholder="Ingrese el título" class="form-control" name="titulo">
+                        <label for="">Contenido:</label>
+                        <input type="file" name="file" id="file" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col justify-content-center">
+                        <button type="submit" class="send btn btn-success btn-lg">Guardar</button>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Restablecer</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
-        </div>
-        </div>
-    </div>
-    
-    <!-- Modal Reglamento Interno-->
-    <div class="modal fade" id="reglamentointerno" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel"><i class="fa-solid fa-shield"></i>Reglamento Interno</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <iframe src="../media/documentos/Reglamentos/REGLAMENTO-INTERNO-2022.pdf" style="width: 100%; height: 700px;" frameborder="0"></iframe>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <!-- Modal Reglamento Evaluacion-->
-    <div class="modal fade" id="reglamentoevaluacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel"><i class="fa-solid fa-shield"></i>Reglamento Evaluacion</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            <iframe src="../media/documentos/Reglamentos/REGLAMENTO-DE-EVALUACION-2022.pdf" style="width: 100%; height: 700px;" frameborder="0"></iframe>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <!-- Modal Reglamento Convivenvia-->
-    <div class="modal fade" id="reglamentoconvivencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel"> <i class="fa-solid fa-shield"></i> Reglamento Convivencia</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            <iframe src="../media/documentos/Reglamentos/REGLAMENTO-CONVIVENCIA-ESCOLAR-2021.pdf" style="width: 100%; height: 700px;" frameborder="0"></iframe>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
+            </form>
         </div>
         </div>
     </div>
@@ -697,82 +448,6 @@
         </div>
     </div>
     
-    <!-- Modal Protocolo Sanitario-->
-    <div class="modal fade" id="protocolosanitario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Protocolo Sanitario</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    
-    <!-- Modal Manual Retorno-->
-    <div class="modal fade" id="manualretorno" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Manual Retorno</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <!-- Modal Parvulo-->
-    <div class="modal fade" id="parvulo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Parvulo</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <!-- Modal Basica Y Media-->
-    <div class="modal fade" id="basicaymedia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Basica y Media</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-        </div>
-    </div>
     
     <!-- Modal Reporte-->
     <div class="modal fade" id="reporte" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

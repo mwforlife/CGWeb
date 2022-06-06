@@ -9,7 +9,7 @@ class Controller{
 
     private function conexion(){
         
-        $this->mi = new mysqli("localhost", "root", "", "CG");
+        $this->mi = new mysqli("localhost", "colegi38_informatica", "informatica2022", "colegi38_colegio");
         if ($this->mi->connect_errno) {
             echo "Fallo al conectar a MySQL: (" . $this->mi->connect_errno . ") " . $this->mi->connect_error;
         }
@@ -82,6 +82,22 @@ class Controller{
     public function InsertGalery($titulo,$tipo,$valor){
         $this->conexion();
         $sql = "INSERT INTO galeria values (null, '$titulo', '$valor',$tipo, now())";
+        $resultado = $this->mi->query($sql);
+        $this->desconexion();
+        return json_encode($resultado);
+    }
+
+    public function registraDocumentos($titulo, $menu, $Ubicacion, $tipo, $estado){
+        $this->conexion();
+        $sql = "insert into submenu values (null, '$titulo', '$menu', '$Ubicacion', '$tipo', '$estado')";
+        $resultado = $this->mi->query($sql);
+        $this->desconexion();
+        return json_encode($resultado);
+    }
+
+    public function registraReglamento($titulo, $menu, $Ubicacion, $tipo, $estado){
+        $this->conexion();
+        $sql = "insert into submenu values (null, '$titulo', '$menu', '$Ubicacion', '$tipo', '$estado')";
         $resultado = $this->mi->query($sql);
         $this->desconexion();
         return json_encode($resultado);

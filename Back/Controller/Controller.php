@@ -11,7 +11,7 @@ class Controller{
 
     private function conexion(){
         
-        $this->mi = new mysqli("localhost", "root", "", "CG");
+        $this->mi = new mysqli("localhost", "colegi38_informatica", "informatica2022", "colegi38_colegio");
         if ($this->mi->connect_errno) {
             echo "Fallo al conectar a MySQL: (" . $this->mi->connect_errno . ") " . $this->mi->connect_error;
         }

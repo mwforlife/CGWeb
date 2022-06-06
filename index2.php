@@ -42,7 +42,7 @@
                     <p class="object__text">
                         <a href="tel:722471665" class="object__text--link">722471665</a> /  
                         <a href="tel:722472581" class="object__text--link">722472581</a><br>
-                        <a href="mailto:colegiograneros@gmail.com" class="object__text--link">colegiograneros@gmail.com</a>
+                        <a href="mailto:contacto@colegiograneros.cl" class="object__text--link">contacto@colegiograneros.cl</a>
                     </p>
                 </div>
                 

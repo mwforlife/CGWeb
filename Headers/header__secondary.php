@@ -1,5 +1,5 @@
 <?php
-require_once '../Back/Controller/Controllerinterno.php';
+require_once '../Back/Controller/ControllerInterno.php';
 
 $c = new Controller();
 
@@ -20,9 +20,12 @@ for ($i=0; $i < count($lista); $i++) {
             for ($y=0; $y < count($lista2); $y++) { 
                 $sm = $lista2[$y];
                 if ($sm->getMenu() == $m->getId()) {
-                    if ($sm->getTipo() == 1 || $sm->getTipo() == 3) {
+                    if ($sm->getTipo() == 1) {
                         echo "<li class='submenu--item'><a target='_Blank' href='../".$sm->getUbicacion()."' class='submenu--link'>".$sm->getNombre()."</a></li>";
-                    }else{
+                    }elseif($sm->getTipo() == 3){
+                        echo "<li class='submenu--item'><a target='_Blank' href='".$sm->getUbicacion()."' class='submenu--link'>".$sm->getNombre()."</a></li>";
+                    }
+                    else{
                     echo "<li class='submenu--item'><a href='../".$sm->getUbicacion()."' class='submenu--link'>".$sm->getNombre()."</a></li>";
                     }
                 }
