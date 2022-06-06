@@ -267,7 +267,7 @@
                                 <label for="">LLamanos</label>
                                 <p>
                                     <a href="tel:722471665">722471665</a><br/>
-                                    <a href="tel:722471665">722471665</a>
+                                    <a href="tel:722472581">722472581</a>
                                 </p>
                                
                            </div>
