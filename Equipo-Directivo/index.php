@@ -30,7 +30,7 @@
                     <p class="object__text">
                         <a href="tel:722471665" class="object__text--link">722471665</a> 
                         <a href="tel:722472581" class="object__text--link">722472581</a><br>
-                        <a href="mailto:colegiograneros@gmail.com" class="object__text--link">colegiograneros@gmail.com</a>
+                        <a href="mailto:contacto@colegiograneros.cl" class="object__text--link">contacto@colegiograneros.cl</a>
                     </p>
                 </div>
                 
@@ -54,7 +54,7 @@
                 
                 <div class="headerInfo__content__object">
                     <p>
-                    <a href="#" class="object__link">WebMail</a>
+                    <a target="_blank" href="https://www.office.com/" class="object__link">WebMail</a>
                     </p>
                 </div>
             </div>
@@ -76,102 +76,30 @@
         </h2>
          
           <div class="container">
-            <div class="row">        
-        <div class="col-md-4 col-sm-6">
-            <div class="our-team d-flex flex-column align-items-center">
-                <div class="pic">
-                    <img src="../img/Docentes/img-1.jpg">
-                </div>
-                <div class="team-content text-center">
-                    <h3 class="title">Maria Elisa Muñoz Madrid</h3>
-                    <span class="post">Vice Rectora</span>
-                    <ul class="social">
-                        <li><a href="#" class="fab fa-facebook"></a></li>
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-google-plus"></a></li>
-                        <li><a href="#" class="fab fa-skype"></a></li>
-                    </ul>
-                </div>
+            <div class="row">                   
+                <?php
+                                $lista = $c->listarpersonal(1);
+                                for ($i=0; $i < count($lista); $i++) { 
+                                    $p = $lista[$i];
+                                    echo "<div class='col-md-3 col-sm-6'>";
+                                    echo "<div class='our-team d-flex flex-column align-items-center'>";
+                                    echo "<div class='pic'>";
+                                    echo "<img src='../img/Docentes/".$p->getFoto()."'>";
+                                    echo "</div>";
+                                    echo "<div class='team-content text-center'>";
+                                    echo "<h3 class='title'>".$p->getNombre()." ".$p->getApellido()."</h3>";
+                                    echo "<span class='post'>".$p->getCargo()."</span>";
+                                    echo "<ul class='social'>";
+                                    echo "<li><a href='mailto:".$p->getCorreo()."' class='fa-solid fa-envelope'></a></li>";
+                                    echo "</ul>";
+                                    echo "</div>";
+                                    echo "</div>";
+                                    echo "</div>";
+
+                                }
+                            ?>
             </div>
-        </div>
-        
-        
-        <div class="col-md-4 col-sm-6">
-            <div class="our-team d-flex flex-column align-items-center">
-                <div class="pic">
-                    <img src="../img/Docentes/img-1.jpg">
-                </div>
-                <div class="team-content text-center">
-                    <h3 class="title">Claudio Enrique Gutierrez Lazo</h3>
-                    <span class="post">Asesor técnico General</span>
-                    <ul class="social">
-                        <li><a href="#" class="fab fa-facebook"></a></li>
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-google-plus"></a></li>
-                        <li><a href="#" class="fab fa-skype"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
- 
-        
-        <div class="col-md-4 col-sm-6">
-            <div class="our-team d-flex flex-column align-items-center">
-                <div class="pic">
-                    <img src="../img/Docentes/img-1.jpg">
-                </div>
-                <div class="team-content text-center">
-                    <h3 class="title">Hector Miguel Guttierez lazo</h3>
-                    <span class="post">Fundador</span>
-                    <ul class="social">
-                        <li><a href="#" class="fab fa-facebook"></a></li>
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-google-plus"></a></li>
-                        <li><a href="#" class="fab fa-skype"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        
-        <div class="col-md-4 col-sm-6">
-            <div class="our-team d-flex flex-column align-items-center">
-                <div class="pic">
-                    <img src="../img/Docentes/img-1.jpg">
-                </div>
-                <div class="team-content text-center">
-                    <h3 class="title">Consuelo Gutierrez Romero</h3>
-                    <span class="post">Directora de recursos</span>
-                    <ul class="social">
-                        <li><a href="#" class="fab fa-facebook"></a></li>
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-google-plus"></a></li>
-                        <li><a href="#" class="fab fa-skype"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        
-        <div class="col-md-4 col-sm-6">
-            <div class="our-team d-flex flex-column align-items-center">
-                <div class="pic">
-                    <img src="../img/Docentes/img-1.jpg">
-                </div>
-                <div class="team-content text-center">
-                    <h3 class="title">Luisa Vera Diaz</h3>
-                    <span class="post">Directora Unidad Curricular</span>
-                    <ul class="social">
-                        <li><a href="#" class="fab fa-facebook"></a></li>
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-google-plus"></a></li>
-                        <li><a href="#" class="fab fa-skype"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-         </div>
+ </div>
     
       
       

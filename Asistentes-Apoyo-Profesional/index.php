@@ -71,14 +71,14 @@
     </header>
     
    <main>
-      <h2 class="content__title">Profesores de Asignaturas
+      <h2 class="content__title">Asistentes de Apoyo Profesional
           <div class="separador"></div>
         </h2>
          
           <div class="container">
             <div class="row">                   
                 <?php
-                                $lista = $c->listarpersonal(4);
+                                $lista = $c->listarpersonal(6);
                                 for ($i=0; $i < count($lista); $i++) { 
                                     $p = $lista[$i];
                                     echo "<div class='col-md-3 col-sm-6'>";

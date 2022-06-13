@@ -11,7 +11,7 @@ class Controller{
 
     private function conexion(){
         
-        $this->mi = new mysqli("localhost", "colegi38_informatica", "informatica2022", "colegi38_colegio");
+        $this->mi = new mysqli("localhost", "root", "", "CG");
         if ($this->mi->connect_errno) {
             echo "Fallo al conectar a MySQL: (" . $this->mi->connect_errno . ") " . $this->mi->connect_error;
         }
@@ -103,6 +103,28 @@ class Controller{
             $tipo = $rs['id_tip'];
             $fecha = $rs['fecha'];
             $m = new Galeria($id, $nombre, $ubicacion, $tipo, $fecha);
+            $lista[] = $m;
+        }
+        $this->desconexion();
+        return $lista;
+    }
+
+    public function listarpersonal($tipo){
+        $this->conexion();
+        $sql = "SELECT * FROM personal where id_tip=$tipo";
+        $resultado = $this->mi->query($sql);
+        $lista = array();
+        while ($rs = mysqli_fetch_array($resultado)) {
+            $id = $rs['id_per'];
+            $nombre = $rs['nombre'];
+            $apellido = $rs['apellido'];
+            $correo = $rs['correo'];
+            $telefono = $rs['telefono'];
+            $tipo = $rs['id_tip'];
+            $cargo = $rs['cargo'];
+            $foto = $rs['foto'];
+            $fecha = $rs['fecha'];
+            $m = new Personal($id, $nombre, $apellido, $correo, $telefono, $tipo, $cargo, $foto, $fecha);
             $lista[] = $m;
         }
         $this->desconexion();

@@ -91,6 +91,7 @@ insert into submenu value(null,"Reglamento Interno",4,"media/documentos/Reglamen
 insert into submenu value(null,"Reglamento De Evaluación",4,"media/documentos/Reglamentos/REGLAMENTO-DE-EVALUACION-2022",1);
 insert into submenu value(null,"Reglamento Convivenvia Escolar",4,"media/documentos/Reglamentos/REGLAMENTO-CONVIVENVIA-ESCOLAR-2022",1);
 
+insert into submenu values(null, "Manul de Retorno a Clases",8,"media/uploads/retorno/manul1351862022.pdf",1,1);
 create table estadoAdmision(
 id_est int not null auto_increment primary key,
 nombre varchar(60) not null

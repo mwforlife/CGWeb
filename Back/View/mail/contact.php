@@ -63,6 +63,7 @@ $mail->FromName = "Colegio Graneros | Contacto";
 $mail->Subject = "Contacto Desde la Web";
 $mail->Body = $email_message;
 $mail->AddAddress("contacto@colegiograneros.cl", "Contacto - Colegio Graneros");
+$mail->addReplyTo("wmompoint@colegiograneros.cl");
 $mail->IsHTML(true);
 $mail->AltBody = "This is the body in plain text for non-HTML mail clients";
 
