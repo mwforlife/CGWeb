@@ -51,22 +51,21 @@ foreach (array_keys($swap_var) as $key){
 }
 
 $mail = new PHPMailer();
+$mail->CharSet = 'UTF-8';
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = "ssl";
 $mail->Host = "mail.colegiograneros.cl";
 $mail->Port = 465;
-$mail->Username = "contacto@colegiograneros.cl";
-$mail->Password = "informatica2022";
-$mail->From = "contacto@colegiograneros.cl";
+$mail->Username = "contactanos@colegiograneros.cl";
+$mail->Password = "Colegio2022@";
+$mail->From = "contactanos@colegiograneros.cl";
 $mail->FromName = "Colegio Graneros | Contacto";
 $mail->Subject = "Contacto Desde la Web";
 $mail->Body = $email_message;
-$mail->AddAddress("contacto@colegiograneros.cl", "Contacto - Colegio Graneros");
-$mail->addReplyTo("wmompoint@colegiograneros.cl");
+$mail->AddAddress("contact@colegiograneros.cl", "Contacto - Colegio Graneros");
 $mail->IsHTML(true);
 $mail->AltBody = "This is the body in plain text for non-HTML mail clients";
-
 
 // check if the email script is in demo mode, if it is then dont actually send an email
 if (DEMO){
@@ -82,5 +81,5 @@ if (DEMO){
     if ($mail->send()) {
         echo 1;
     }else{
-        echo "The email message was not sent.";
+       echo "Error al enviar el mensaje: ".$mail->ErrorInfo;
     }

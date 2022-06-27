@@ -52,6 +52,7 @@ $(document).ready(function() {
             success: function(datos) {
                 if (datos == "1") {
                     ClosePreloader();
+                    $("#form-contact")[0].reset();
                     swal.fire("Exito", "Mensaje enviado correctamente \n A la Brevedad alguien se contactará contigo.", "success");
                 }else{
                     ClosePreloader();
